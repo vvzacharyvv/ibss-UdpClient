@@ -326,12 +326,12 @@
     <rect>
      <x>10</x>
      <y>90</y>
-     <width>40</width>
+     <width>61</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>速度z</string>
+    <string>速度alpha</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_xVel">
@@ -423,6 +423,11 @@
    <item>
     <property name="text">
      <string>内弧面缓步步态(90度)</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>下爬</string>
     </property>
    </item>
    <item>

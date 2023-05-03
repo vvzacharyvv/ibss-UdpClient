@@ -332,7 +332,10 @@ void Widget::on_btn_yVel_clicked()
 
 void Widget::on_btn_zVel_clicked()
 {
-    QString data=floatToHex("3",ui->edit_z->text());
+    float a=ui->edit_z->text().toFloat()*3.14/180;
+    QString str=QString("%1").arg(a);
+    //QString data=floatToHex("3",ui->edit_z->text());
+    QString data=floatToHex("3",str);
     if (data.length() <= 0) {
         return;
     }
@@ -372,6 +375,9 @@ void Widget::on_btn_gaitMode_clicked()
         case 5://90 in amb
             str_set="07";
                     break;
+         case 6://Descending
+            str_set="08";
+                break;
     default:
         break;
     }

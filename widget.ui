@@ -422,12 +422,12 @@
    </item>
    <item>
     <property name="text">
-     <string>内弧面缓步步态(90度)</string>
+     <string>下爬</string>
     </property>
    </item>
    <item>
     <property name="text">
-     <string>下爬</string>
+     <string/>
     </property>
    </item>
    <item>

@@ -372,10 +372,7 @@ void Widget::on_btn_gaitMode_clicked()
         case 4://90 out amb
             str_set="05";
                     break;
-        case 5://90 in amb
-            str_set="07";
-                    break;
-         case 6://Descending
+         case 5://Descending
             str_set="08";
                 break;
     default:

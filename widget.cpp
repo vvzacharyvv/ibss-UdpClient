@@ -311,31 +311,54 @@ void Widget::on_btnSend_clicked()
 
 void Widget::on_btn_xVel_clicked()
 {
+    QString data;
+if(ui->edit_x->text()=="0")
+{
+     data ="23020100000000AA";
+}
+else
+{
+     data=floatToHex("1",ui->edit_x->text());
+    if (data.length() <= 0) {
+        return;
+    }
+}
 
-   QString data=floatToHex("1",ui->edit_x->text());
-   if (data.length() <= 0) {
-       return;
-   }
 
    hex_sendData(AppConfig::UdpServerIP, AppConfig::UdpServerPort, data);
 }
 
 void Widget::on_btn_yVel_clicked()
 {
-    QString data=floatToHex("2",ui->edit_y->text());
+    QString data;
+if(ui->edit_y->text()=="0")
+{
+     data ="23020200000000AA";
+}
+else
+{
+     data=floatToHex("2",ui->edit_x->text());
     if (data.length() <= 0) {
         return;
     }
+}
 
-    hex_sendData(AppConfig::UdpServerIP, AppConfig::UdpServerPort, data);
+
+   hex_sendData(AppConfig::UdpServerIP, AppConfig::UdpServerPort, data);
 }
 
 void Widget::on_btn_zVel_clicked()
 {
+    QString data;
     float a=ui->edit_z->text().toFloat()*3.14/180;
     QString str=QString("%1").arg(a);
     //QString data=floatToHex("3",ui->edit_z->text());
-    QString data=floatToHex("3",str);
+    if(str=="0")
+    {
+        data ="23020300000000AA";
+    }
+    else
+     {data=floatToHex("3",str);}
     if (data.length() <= 0) {
         return;
     }

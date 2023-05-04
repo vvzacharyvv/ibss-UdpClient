@@ -380,24 +380,27 @@ void Widget::on_btn_gaitMode_clicked()
 {
     QString str_set;
     switch (ui->cmb_GaitMode->currentIndex()) {
-        case 0://90 trot
-            str_set="00";
-                    break;
-        case 1://90 amb
-            str_set="01";
-            break;
-        case 2://180 trot
-            str_set="02";
-                    break;
-        case 3://180 amb
-            str_set="03";
-                    break;
-        case 4://90 out amb
-            str_set="05";
-                    break;
-         case 5://Descending
-            str_set="08";
-                break;
+    case 0://90 trot
+        str_set="00";
+        break;
+    case 1://90 amb
+        str_set="01";
+        break;
+    case 2://180 trot
+        str_set="02";
+        break;
+    case 3://180 amb
+        str_set="03";
+        break;
+    case 4://90 out amb
+        str_set="05";
+        break;
+    case 5://Descending
+        str_set="08";
+        break;
+    case 6://turn
+        str_set="09";
+        break;
     default:
         break;
     }
